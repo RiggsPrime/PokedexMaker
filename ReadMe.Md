@@ -1,7 +1,7 @@
 # Pokedex Maker
 
 The PokedexMaker is a special tool I've made to make small boxes used for Fakemon Showcase.
-This program uses Joh Zelle's graphics.py Module.
+This program uses John Zelle's graphics.py Module.
 
 ## How to use the program
 1. Make sure you have installed Python3.
