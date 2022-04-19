@@ -24,4 +24,9 @@ This program uses John Zelle's graphics.py Module.
 
 ## Customization
 * **Change the Transparency Color**: Open PokedexMaker.py in a text editor and replace every instance of [153,0,0] with [r,g,b] of your desired transparency color.
-* **Add a New Type**:  Open PokedexMaker.py in a text editor and navigate to the list called "typesColors" add a comma after `"Unknown": [138, 216, 192]` (or the last item on the list if you've added one already). After that, on a new line add `"TypeName": [r, g, b]` of your desired Type Name and rgb values of your background colors respectively. Do the same with the "baseColors" list for the color of the circular platform below the Pokemon. Finally, for the type graphic, convert the image to a gif move it to the Text subfolder. It should be names `Type_TypeName.gif`.
+* **Add a New Type**:  Open PokedexMaker.py in a text editor and navigate to the list called "typesColors" add a comma after `"Unknown": [138, 216, 192]` (or the last item on the list if you've added one already). After that, on a new line add `"TypeName": [r, g, b]` of your desired Type Name and rgb values of your background colors respectively. Do the same with the "baseColors" list for the color of the circular platform below the Pokemon. Finally, for the type graphic, convert the image to a gif move it to the Text subfolder. It should be named `Type_TypeName.gif`.
+
+## To Do
+- [ ] A python file that allows you to do customization things above in a more user-freindly interface
+- [ ] Allowing numbers in pokemon names
+- [ ] A python file that allows you compile the entire dex image
