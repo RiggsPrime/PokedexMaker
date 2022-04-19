@@ -1,6 +1,7 @@
 # Pokedex Maker
 
 The PokedexMaker is a special tool I've made to make small boxes used for Fakemon Showcase.
+This program uses Joh Zelle's graphics.py Module.
 
 ## How to use the program
 1. Make sure you have installed Python3.
@@ -9,7 +10,7 @@ The PokedexMaker is a special tool I've made to make small boxes used for Fakemo
 4. For macs, convert the file to .gif (Simply renaming it will not work).
 5. Move the file to the folder with the python file or subfolder of that.
 6. Open Command Prompt (Windows)/Terminal (Mac).
-7. Navigate to your file in Command Prompt/Terminal. Easiest way would be to type `cd ` and then paste the folder name. (e.g. `cd C:\Users\User\Downloads\PokedexMaker`)
+7. Navigate to your file in Command Prompt/Terminal. Easiest way would be to type `cd` and then paste the folder name. (e.g. `cd C:\Users\User\Downloads\PokedexMaker`)
 8. Run the file with `py PokedexMaker.py` or `python PokedexMaker.py` depending on what your system uses.
 9. The file will ask for the following info:
 	1. **input file name**: type `filename.format` if the file is in the same folder as the program. If it is a subfolder, type `SubfolderName/filename.format`.
