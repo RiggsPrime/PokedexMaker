@@ -1,3 +1,6 @@
+# Forked from Pokemon Awful Team
+PokedexMaker with a simple bugfix.
+
 # Pokedex Maker
 
 The PokedexMaker is a special tool I've made to make small boxes used for Fakemon Showcase.

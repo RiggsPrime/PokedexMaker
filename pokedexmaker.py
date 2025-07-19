@@ -104,7 +104,7 @@ for x in range(len(pokename)):
 	if pokename[x].isupper():
 		Letters.append(Image(Point(36,8), "Text/Capital_"+pokename[x]+".gif"))
 	else:
-		Letters.append(Image(Point(36,8), "Text/Lower_"+pokename[x]+".gif"))
+		Letters.append(Image(Point(36,8), "Text/Lower_"+pokename[x].capitalize()+".gif"))
 	nameX += prevLen + math.ceil(Letters[x].getWidth()/2.0)
 	prevLen = + math.floor(Letters[x].getWidth()/2.0)
 	layerOver(Letters[x], output, [nameX,1], [0,0,0])
