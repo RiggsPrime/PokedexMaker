@@ -76,7 +76,7 @@ def layerOver(image, output, firstpos, ignoredColor):
 				output.setPixel(firstpos[0]+x, firstpos[1]+y, color_rgb(image.getPixel(x, y)[0],image.getPixel(x, y)[1],image.getPixel(x, y)[2]))
 
 
-win = GraphWin("Pokedex Maker", 100, 116)
+# win = GraphWin("Pokedex Maker", 100, 116)
 #win.setBackground(color_rgb(typesColors[types[0]][0], typesColors[types[0]][1], typesColors[types[0]][2]))
 box = Image(Point(50,58), "Text/Pokedex.gif")
 sprite = Image(Point(50,58), pokeimg)
@@ -115,7 +115,7 @@ for x in range(len(pokename)):
 	Letters[x].move(nameX-36,0)
 	#Letters[x].draw(win)
 
-output.draw(win)
+# output.draw(win)
 
 for x in range(3):
 	Numbers.append(Image(Point(15+(x*6),8), "Text/Number_"+pokenum[x]+".gif"))
@@ -124,4 +124,4 @@ for x in range(3):
 
 output.save(outputAs)
 
-win.getMouse()
+# win.getMouse()
