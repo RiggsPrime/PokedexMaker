@@ -1,6 +1,8 @@
 from graphics import *
 import math
 
+from PIL import Image as Image_PIL
+
 pokeimg = input("input file name: ")
 #dex = input("box style: ")
 off = input("input sprite Y-offset (leave blank for 0): ")
@@ -78,6 +80,8 @@ win = GraphWin("Pokedex Maker", 100, 116)
 #win.setBackground(color_rgb(typesColors[types[0]][0], typesColors[types[0]][1], typesColors[types[0]][2]))
 box = Image(Point(50,58), "Text/Pokedex.gif")
 sprite = Image(Point(50,58), pokeimg)
+palette_data = Image_PIL.open(pokeimg).getpalette() # Uses PIL library to grab sprite palette
+transparent_color = palette_data[:3] # Truncates the palette data list to the first 3 colors, aka Index 0 of a sprite
 
 output = Image(Point(50, 58),100, 116)
 
@@ -85,16 +89,16 @@ output = Image(Point(50, 58),100, 116)
 fill(output, typesColors[types[0]])
 layerOver(box, output, [0,0], [0,0,0])
 replaceGround(output, baseColors[types[0]])
-layerOver(sprite, output, [18,26+offset], [153,0,0])
+layerOver(sprite, output, [18,26+offset], transparent_color)
 
 if len(types) == 1:
 	type1 = Image(Point(50, 58), "Text/Type_"+types[0]+".gif")
-	layerOver(type1, output, [28,99], [153,0,0])
+	layerOver(type1, output, [28,99], transparent_color)
 else:
 	type1 = Image(Point(50, 58), "Text/Type_"+types[0]+".gif")
-	layerOver(type1, output, [1,99], [153,0,0])
+	layerOver(type1, output, [1,99], transparent_color)
 	type2 = Image(Point(50, 58), "Text/Type_"+types[1]+".gif")
-	layerOver(type2, output, [51,99], [153,0,0])
+	layerOver(type2, output, [51,99], transparent_color)
 
 nameX = 36
 prevLen = 0
