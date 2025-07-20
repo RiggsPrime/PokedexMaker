@@ -1,5 +1,5 @@
 # Forked from Pokemon Awful Team
-NOTE: If you're on this branch, ignore the "How to use this program" instructions below. Refer to `cap_dex_instructions.txt` included in the files.
+**NOTE: If you're on this branch, ignore the "How to use this program" instructions below. Refer to `cap_dex_instructions.txt` included in the files.**
 
 PokedexMaker with some tweaks.
 
