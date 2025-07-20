@@ -3,59 +3,57 @@ import math
 
 from PIL import Image as Image_PIL
 
-pokeimg = input("input file name: ")
+pokefoldername = input("input pokemon name (lowercase): ")
+pokeimg = ("pokemon/") + pokefoldername + ("/front.png")
 #dex = input("box style: ")
-off = input("input sprite Y-offset (leave blank for 0): ")
 offset = 0
-if off != "":
-	offset = int(off)
-types = input("input type(s) seperated by space: ").split(" ")
-pokename = input("input name: ")
+types = input("input type(s) seperated by space (lowercase): ").split(" ")
+pokename = pokefoldername.capitalize()
 pokenum = input("input (3-digit) pokedex number: ")
-outputAs = input("output file name: ")
+outputAs = ("capdex/") + pokenum + ("_") + pokefoldername + (".png")
 
 typesColors = {
-	"Normal": [232,232,216],
-	"Fire": [254,209,180],
-	"Water": [200, 216, 248],
-	"Grass": [216, 240, 192],
-	"Electric": [255,253,202],
-	"Ice": [192, 248, 248],
-	"Psychic": [248, 152, 216],
-	"Fighting": [248, 168, 168],
-	"Poison": [235, 194, 245],
-	"Bug": [216, 224, 200],
-	"Ground": [227, 217, 157],
-	"Rock": [216, 200, 144],
-	"Steel": [219, 219, 219],
-	"Ghost": [208, 176, 248],
-	"Dark": [184, 176, 168],
-	"Dragon": [170, 194, 244],
-	"Fairy": [255, 212, 255],
-	"Flying": [168, 225, 242],
-	"Unknown": [138, 216, 192]
+	"normal": [232,232,216],
+	"fire": [254,209,180],
+	"water": [200, 216, 248],
+	"grass": [216, 240, 192],
+	"electric": [255,253,202],
+	"ice": [192, 248, 248],
+	"psychic": [248, 152, 216],
+	"fighting": [248, 168, 168],
+	"poison": [235, 194, 245],
+	"bug": [216, 224, 200],
+	"ground": [227, 217, 157],
+	"rock": [216, 200, 144],
+	"steel": [219, 219, 219],
+	"ghost": [208, 176, 248],
+	"dark": [184, 176, 168],
+	"dragon": [170, 194, 244],
+	"fairy": [255, 212, 255],
+	"flying": [168, 225, 242],
+	"unknown": [138, 216, 192]
 }
 
 baseColors = {
-	"Normal": [184,184,168],
-	"Fire": [248, 144, 48],
-	"Water": [146, 202, 248],
-	"Grass": [144, 232, 128],
-	"Electric": [224,224,0],
-	"Ice": [48, 216, 208],
-	"Psychic": [248, 56, 168],
-	"Fighting": [248, 112, 112],
-	"Poison": [224, 144, 248],
-	"Bug": [160, 200, 136],
-	"Ground": [213, 197, 108],
-	"Rock": [200, 160, 72],
-	"Steel": [184, 184, 208],
-	"Ghost": [168, 112, 248],
-	"Dark": [144, 136, 136],
-	"Dragon": [48, 112, 192],
-	"Fairy": [255, 151, 226],
-	"Flying": [122, 197, 205],
-	"Unknown": [40, 174, 132]
+	"normal": [184,184,168],
+	"fire": [248, 144, 48],
+	"water": [146, 202, 248],
+	"grass": [144, 232, 128],
+	"electric": [224,224,0],
+	"ice": [48, 216, 208],
+	"psychic": [248, 56, 168],
+	"fighting": [248, 112, 112],
+	"poison": [224, 144, 248],
+	"bug": [160, 200, 136],
+	"ground": [213, 197, 108],
+	"rock": [200, 160, 72],
+	"steel": [184, 184, 208],
+	"ghost": [168, 112, 248],
+	"dark": [144, 136, 136],
+	"dragon": [48, 112, 192],
+	"fairy": [255, 151, 226],
+	"flying": [122, 197, 205],
+	"unknown": [40, 174, 132]
 }
 
 def fill(output, color):
