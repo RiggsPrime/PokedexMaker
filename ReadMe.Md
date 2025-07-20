@@ -7,8 +7,8 @@ Pillow library is required. To install it, run:
 
 In your terminal.
 
--Fixed case sensitivity bug with Pokemon name
--Takes Index 0 of the sprites's palette and sets it as the transparent color
+* Fixed case sensitivity bug with Pokemon name
+* Takes Index 0 of the sprites's palette and sets it as the transparent color
 
 # Pokedex Maker
 
