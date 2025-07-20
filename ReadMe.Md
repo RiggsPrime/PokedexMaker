@@ -1,5 +1,14 @@
 # Forked from Pokemon Awful Team
-PokedexMaker with a simple bugfix.
+PokedexMaker with some tweaks.
+
+Pillow library is required. To install it, run:
+
+`pip install Pillow`
+
+In your terminal.
+
+-Fixed case sensitivity bug with Pokemon name
+-Takes Index 0 of the sprites's palette and sets it as the transparent color
 
 # Pokedex Maker
 
