@@ -2,9 +2,6 @@ The tool works a bit differently on this branch but will speed things up signifi
 
 1. Copy the "pokemon" folder from pokeemerald-expansion/graphics/pokemon and paste it into the PokedexMaker directory (this will take some time)
 2. In the PokedexMaker directory, run "python3 pokedexmaker.py"
-3. Enter the name of the Pokemon you want to create a dex for, in lowercase (ex. maplage)
-4. Enter the Pokemon's type, separated by a space if there are two types in lowercase (ex. grass)
-5. Enter the 3-digit dex number (ex. 001)
 
-Your image will be created in the "capdex" folder, with file name using the dex number and the Pokemon's name, separated by an underscore (ex. 001_maplage.png)
+Your images will be created in the "capdex" folder, with file name using the dex number and the Pokemon's name, separated by an underscore (ex. 001_maplage.png)
 
